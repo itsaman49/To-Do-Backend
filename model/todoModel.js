@@ -5,12 +5,8 @@ const todoSchema=new mongoose.Schema({
         type:String,
         require:true,
     },
-    isdeleted:{
-        type:boolean,
-        default:false
-    }
 },{
     timestamps:true
 })
 
-module.exports=('todolist',todoSchema);
+module.exports=new mongoose.model('todolist',todoSchema);
